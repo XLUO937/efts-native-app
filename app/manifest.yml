@@ -1,0 +1,16 @@
+manifest_version: 1
+
+artifacts:
+  setup_script: setup/setup.sql
+  readme: README.md
+
+parameters:
+  - name: app_mode
+    type: string
+    default: "dev"
+    description: "dev or prod"
+
+privileges:
+  - REFERENCE DATA_CATALOG.UDW_PRESENTATION.EFTS_SUMMARY_VIEW_DYNAMIC_TABLE
+
+read_only: true

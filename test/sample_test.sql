@@ -1,0 +1,1 @@
+CALL implementation.sample_procedure();

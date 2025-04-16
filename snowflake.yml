@@ -1,0 +1,17 @@
+definition_version: 2
+
+entities:
+  template_example_package:
+    type: application package
+    stage: TEMPLATE_EXAMPLE_PACKAGE.PUBLIC.TEMPLATE_EXAMPLE_STAGE
+    identifier: template_example_package
+    manifest: app/manifest.yml
+    artifacts:
+      - src: app/*
+        dest: ./
+
+  template_example_app:
+    type: application
+    from:
+      target: template_example_package
+    debug: false
